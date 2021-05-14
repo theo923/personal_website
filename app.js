@@ -19,21 +19,32 @@ barItem.forEach((item) => {
   });
 });
 
-let box2 = document.querySelector("#box2 .content-box");
+let box2content = document.querySelector("#box2 .content-box");
 let maxHeight = document.documentElement.offsetHeight;
 window.addEventListener("scroll", scroll);
 function scroll() {
   let scrollTracker = this.scrollY;
-  if(scrollTracker >= maxHeight * 15 / 100){
-    box2.classList.add("easeInAnimation");
-    box2.style.opacity = 1;
+  console.log(scrollTracker);
+  if(scrollTracker >= 800 && scrollTracker <= 3000){
+    box2content.classList.add("easeInAnimation");
+    box2content.style.opacity = 1;
   }
   else{
-    box2.classList.remove("easeInAnimation");
-    box2.style.opacity = 0;
+    box2content.classList.remove("easeInAnimation");
+    box2content.style.opacity = 0;
   }
   
 }
+
+let box2 = document.querySelector("#box2");
+let barContainer = document.querySelector(".bar-container");
+box2.addEventListener('mouseover', () =>{
+  cursorTracker.forEach(tracker => tracker.classList.add("color-change"));
+});
+
+box2.addEventListener('mouseleave', () =>{
+  cursorTracker.forEach(tracker => tracker.classList.remove("color-change"));
+});
 
 let headingText = document.querySelector('#box1 .content-box .headingText');
 headingText.innerHTML = "Hello!";
