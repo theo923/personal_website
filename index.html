@@ -4,17 +4,22 @@
   <meta charset="utf-8">
 
   <title>Mypage</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500&display=swap" rel="stylesheet"> 
+
+  <!-- import css -->
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+  <!-- content contain all boxs of the page -->
   <section id="content-container">
-    <div class="scrollBar"></div>
+    <!-- box1 -->
     <div id="box1" class="box">
+      <!-- animated background -->
       <div class="background-box">
         <div></div>
         <div></div>
@@ -27,13 +32,15 @@
         <div></div>
         <div></div>
       </div>
-      
+
+      <!-- box1 content -->
       <div class="content-box">
         <p class="headingText"></p>
         <p class="mainText"></p>
       </div>
     </div>
 
+    <!-- box2 -->
     <div id="box2" class="box">
       <div class="content-box">
         <p class="headingText"></p>
@@ -41,6 +48,7 @@
       </div>
     </div>
 
+    <!-- box3 -->
     <div id="box3" class="box">
       <div class="content-box">
         <p class="headingText"></p>
@@ -50,12 +58,14 @@
 
   </section>
 
+<!-- cursor -->
 <div class="cursor-container">
   <div id="cursor" class="cursor"></div>
   <div id="cursor2" class="cursor"></div>
   <div id="cursor3" class="cursor"></div>
 </div>
-  
+
+<!-- navigation bar -->
 <section id="navigation-bar">
   <div class = "bar-container" >
     <button id = "naviButton1" class = "bar-item">CONTACT<br>━━━━━━</br></button>
@@ -65,6 +75,7 @@
   </div>
 </section>
 
+<!-- background music (still finding for a better source) -->
 <figure id="background-music2">
     <audio
         autoplay
@@ -72,6 +83,11 @@
         src="https://dl1001.ymcdn.site/04a6adc17c6bea7051b616dd87513469/RYhKUKzD6IQ?dl=1">
     </audio>
 </figure>
+
+<!-- scroll bar -->
+<div class="scrollBar"></div>
+
+<!-- import javascript -->
 <script src="app.js"></script>
 </body>
 </html>
