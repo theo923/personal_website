@@ -4,6 +4,16 @@
 	I will try keeping things update every day!
 	and I will list the features that I have done 
 	and the Roadmap that any features that I want to achieve
+	
+## Content that working on
+
+| Content | Support |
+|---|:---:|
+| Homepage |  |
+| About Me |  |
+| Resume |  |
+| Goal |  |
+| Contact |  |
 
 ## Features that working on
 
