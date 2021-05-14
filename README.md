@@ -24,3 +24,4 @@
 | Navigation Bar | ✔️ |
 | Animated Buttons | ✔️ |
 | Apply Color using Color Palette | ✔️ |
+| Dynamic Scroll Bar | ✔️ |

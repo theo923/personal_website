@@ -1,4 +1,10 @@
+html {
+  scrollbar-width: none;
+}
 
+::-webkit-scrollbar {
+  display:none;
+}
 
 body{
     background-color: #000000;
@@ -6,9 +12,8 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
 
-  }
-  
 
 /*==================== animate background ====================*/
 .background-box div{
@@ -253,31 +258,26 @@ body{
   color: rgb(204, 18, 18);
 }
 
-@media (max-width: 600px){
-  .bar-item {
-      margin: 0;
-      font-size: 80%;
-      width: 25%;
-  }
-}
-
-.loadingBar {
+.scrollBar {
   height: 0%;
   width: 10px;
   background-color: #FFFFFF;
   position: fixed;
   top: 0;
   right: 0;
-  animation: loadingBar 1s linear;
+  transition: 1s linear;
 }
 
-@keyframes loadingBar {
-  to {
-    background-color: rgb(44, 22, 168);
-    height: 100%;
+@media (max-width: 600px){
+  .bar-item {
+      margin: 0;
+      font-size: 80%;
+      width: 25%;
+  }
+  .scrollBar {
+    width: 7px;
   }
 }
-
 
 /*==================== cursor ====================*/
   

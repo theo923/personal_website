@@ -19,27 +19,40 @@ barItem.forEach((item) => {
   });
 });
 
+let box1 = document.querySelector("#box1");
+let box2 = document.querySelector("#box2");
+let box3 = document.querySelector("#box3");
+
+let scrollBar = document.querySelector(".scrollBar");
+
 let box2content = document.querySelector("#box2 .content-box");
 let maxHeight = document.documentElement.offsetHeight;
+
 window.addEventListener("scroll", scroll);
 function scroll() {
   let scrollTracker = this.scrollY;
-  console.log(scrollTracker);
-  if(scrollTracker >= 800 && scrollTracker <= 3000){
+
+  if(scrollTracker >= (box1.offsetHeight * 50 / 100) && scrollTracker <= box1.offsetHeight + box2.offsetHeight){
     box2content.classList.add("easeInAnimation");
     box2content.style.opacity = 1;
+    scrollBar.style.backgroundColor = "#03B5AA";
   }
   else{
     box2content.classList.remove("easeInAnimation");
     box2content.style.opacity = 0;
+    scrollBar.style.backgroundColor = "#E7E5DF";
   }
-  
+
+  [-9,16,20,24,30,34,40,44,50,54,60,65,71].forEach((num) => {
+    ((scrollTracker >= maxHeight * num / 100 && num % 2 == 0)? scrollBar.style.height = (num + 10) + "%" :(scrollTracker >= maxHeight * num / 100 && num % 2 != 0) ? scrollBar.style.height = (num+23) + "%" : null);
+  });
 }
 
-let box2 = document.querySelector("#box2");
+
 let barContainer = document.querySelector(".bar-container");
 box2.addEventListener('mouseover', () =>{
   cursorTracker.forEach(tracker => tracker.classList.add("color-change"));
+  
 });
 
 box2.addEventListener('mouseleave', () =>{
