@@ -11,6 +11,7 @@ let barItem = Array.from(document.getElementsByClassName('bar-item'));
 barItem.forEach((item) => {
   let target = document.getElementById(item.id);
   target.addEventListener('mouseover', () =>{
+    console.log(cursorTracker[0]);
     cursorTracker.forEach(tracker => tracker.classList.add("link-grow"));
   });
   
@@ -19,7 +20,21 @@ barItem.forEach((item) => {
   });
 });
 
-
+let box2 = document.querySelector("#box2 .content-box");
+let maxHeight = document.documentElement.offsetHeight;
+window.addEventListener("scroll", scroll);
+function scroll() {
+  let scrollTracker = this.scrollY;
+  if(scrollTracker >= maxHeight * 15 / 100){
+    box2.classList.add("easeInAnimation");
+    box2.style.opacity = 1;
+  }
+  else{
+    box2.classList.remove("easeInAnimation");
+    box2.style.opacity = 0;
+  }
+  
+}
 
 let headingText = document.querySelector('#box1 .content-box .headingText');
 headingText.innerHTML = "Hello!";
