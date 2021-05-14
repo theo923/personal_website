@@ -185,11 +185,11 @@ body{
   animation: easein 5s;
 }
 
-#box1 .headingText{
+#box1 .headingText {
   color: #E7E5DF;
 }
 
-#box1 .mainText{
+#box1 .mainText {
   color: #E7E5DF;
 }
 
@@ -311,7 +311,7 @@ body{
   transition: all 0.2s ease;
 }
 
-.link-gro {
+.link-grow {
   transform: scale(2);
   transition: ease-out 0.2s;
   background-color: #00171F;

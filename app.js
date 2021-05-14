@@ -11,7 +11,6 @@ let barItem = Array.from(document.getElementsByClassName('bar-item'));
 barItem.forEach((item) => {
   let target = document.getElementById(item.id);
   target.addEventListener('mouseover', () =>{
-    console.log(cursorTracker[0]);
     cursorTracker.forEach(tracker => tracker.classList.add("link-grow"));
   });
   
