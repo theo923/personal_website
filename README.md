@@ -20,7 +20,7 @@
 | Features | Support |
 |---|:---:|
 | Animated Background | ✔️ |
-| Special Cursor | ✔️ |
+| Special Cursor(dynamic color change) | ✔️ |
 | Navigation Bar | ✔️ |
 | Animated Buttons | ✔️ |
 | Apply Color using Color Palette | ✔️ |
