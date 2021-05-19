@@ -152,7 +152,7 @@ body{
 
 #box4 {
   background: #102B3F;
-  height: 2700px;
+  height: 2900px;
   width: 100%;
 }
 
@@ -180,23 +180,25 @@ body{
 }
 
 .textBox1 {
+  display: flex;
   font-family: Raleway;
   position: relative;
-  top:40%;
   align-items: center;
   justify-items: center;
   font-size: 60px;
   color: #FFFFFF;
+  transition: ease 0.8s;
 }
 
 .textBox2 {
+  display: flex;
   font-family: Raleway;
   position: relative;
-  top:40%;
   align-items: center;
   justify-items: center;
   font-size: 60px;
   color: #FFFFFF;
+  transition: ease 0.8s;
 }
 
 /*==================== specific setting for box ====================*/
@@ -253,20 +255,22 @@ body{
   background-color: rgba(0,0,0, 0.4);
 }
 
-#box4 .gridbox {
+#box4 .gridBox1 {
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 5%;
   align-items: left;
   justify-items: left;
+  background-color: #98D2EB;
 }
 
-#box4 .gridbox2 {
+#box4 .gridBox2 {
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 5%;
   align-items: right;
   justify-items: right;
+  background-color: cadetblue;
 }
 
 #box4 .imgBox {
@@ -373,7 +377,7 @@ body{
   }
 
   #box4 {
-    height: 250vh;
+    height: 170vh;
   }
 
   #box4 .content-box2 {
@@ -381,23 +385,43 @@ body{
     width: 90%;
   }
 
-  #box4 .gridbox {
+  #box4 .gridBox1 {
     grid-template-columns: 50% 50%;
 
   }
   
-  #box4 .gridbox2 {
+  #box4 .gridBox2 {
     grid-template-columns: 50% 50%;
   }
 
+  #box4 .content-box2 {
+    left: 0%;
+    width: 100%;
+  }
+
+  .imgBox {
+    top: 0%;
+  }
+
+  .imgBox2 {
+    top: 0%;
+  }
+  
   .textBox1 {
-    font-size: 40px;
+    top: 0;
   }
 
   .textBox2 {
-    font-size: 40px;
+    top: 0;
   }
 
+  #box4 .gridBox1{
+    margin: 0%;
+  }
+
+  #box4 .gridBox2{
+    margin: 0%;
+  }
 }
 
 @media (max-width: 900px){
@@ -426,26 +450,54 @@ body{
     padding: 15px;
   }
 
-  #box4 .content-box2 {
-    left: 0%;
-    width: 100%
+  #box4 {
+    height: 270vh;
+  }
+
+  #box4 .gridBox1 {
+    grid-template-columns: 50% 50%;
+  }
+
+  #box4 .gridBox2 {
+    grid-template-columns: 50% 50%;
+  }
+
+  #box4 .content-box2{
+    gap: 340px;
+    top: 10%;
+  }
+
+  .gridBox1 {
+    align-items: center;
+    justify-items: center;
+    margin: 0;
+  }
+
+  .gridBox2 {
+    align-items: center;
+    justify-items: center;
+    margin: 0;
   }
 
   .imgBox {
-    top: 25%;
+    top: -90%;
+    left: -5%;
   }
 
   .imgBox2 {
-    top: 25%;
+    top: -90%;
+    left: -70%;
   }
-  
+
   .textBox1 {
-    top: 0;
+    left: -100%;
   }
 
   .textBox2 {
-    top: 0;
+    left: 5%;
   }
+
+
 }
 
 @media (max-width: 600px){
@@ -464,37 +516,7 @@ body{
   }
 
   #box3 {
-    height: 200vh;
-  }
-
-  .gridbox {
-    align-items: center;
-    justify-items: center;
-    margin: 0;
-  }
-
-  .gridbox2 {
-    align-items: center;
-    justify-items: center;
-    margin: 0;
-  }
-
-  .imgBox {
-    top: 70%;
-    left: -5%;
-  }
-
-  .imgBox2 {
-    top: 70%;
-    left: -70%;
-  }
-
-  .textBox1 {
-    left: -40%;
-  }
-
-  .textBox2 {
-    left: -20%;
+    height: 240vh;
   }
 
 }

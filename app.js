@@ -78,11 +78,28 @@ let attitudeText = document.querySelector('#box3 .content-box2 #attitude');
 let locationText = document.querySelector('#box3 .content-box2 #location');
 let supportText = document.querySelector('#box3 .content-box2 #support');
 
-let textbox1 = document.querySelector('#box4 #textbox1');
-let textbox2 = document.querySelector('#box4 #textbox2');
-let textbox3 = document.querySelector('#box4 #textbox3');
-let textbox4 = document.querySelector('#box4 #textbox4');
+let textbox = [];
+textbox.push(document.querySelector('#box4 #textbox1'));
+textbox.push(document.querySelector('#box4 #textbox2'));
+textbox.push(document.querySelector('#box4 #textbox3'));
+textbox.push(document.querySelector('#box4 #textbox4'));
 
+let visible = []
+visible.push("MindMap");
+visible.push("TeamWork");
+visible.push("Language");
+visible.push("Personality");
+
+textbox[0].innerHTML = "MindMap";
+textbox[1].innerHTML = "TeamWork";
+textbox[2].innerHTML = "Language";
+textbox[3].innerHTML = "Personality";
+
+let gridbox = [];
+gridbox.push(document.querySelector('#box4 #gridbox1'));
+gridbox.push(document.querySelector('#box4 #gridbox2'));
+gridbox.push(document.querySelector('#box4 #gridbox3'));
+gridbox.push(document.querySelector('#box4 #gridbox4'));
 
 let imgbox = [];
 imgbox.push(document.querySelector('#box4 #imgbox1'));
@@ -95,11 +112,38 @@ imgbox[1].classList.add("rotate-10");
 imgbox[2].classList.add("rotate10");
 imgbox[3].classList.add("rotate-10");
 
+function getContext (index) {
+  textbox[index].innerHTML = invisible[index]; 
+  textbox[index].style.fontSize = "30px"; 
+  textbox[index].style.margin = "5%";
+}
+
+function getTitle (index) {
+  textbox[index].innerHTML = visible[index]; 
+  textbox[index].style.fontSize = "60px"; 
+  textbox[index].style.alignItems = "center";
+  textbox[index].style.justifyItems = "center";
+}
+
 imgbox.forEach((value, index) => {
-  value.addEventListener("click", ()=>{
+
+
+  gridbox[index].addEventListener("click", ()=>{
     value.classList.remove("rotate10");
-    value.classList.remove("rotate-10");      
-  });
+    value.classList.remove("rotate-10");    
+    getContext(index);
+    textbox.forEach((val, idx) => {
+      if(idx != index && idx % 2 == 0) {
+        imgbox[idx].classList.add("rotate10");
+        getTitle(idx);
+      }
+      else if(idx != index && idx % 2 != 0) {
+        imgbox[idx].classList.add("rotate-10"); 
+        getTitle(idx);
+      }
+    });
+
+  });  
 
   value.addEventListener(("mouseover"), () => {
     cursorTracker.forEach(tracker => tracker.classList.add("link-grow"));
@@ -108,8 +152,10 @@ imgbox.forEach((value, index) => {
   value.addEventListener(("mouseleave"), () => {
     cursorTracker.forEach(tracker => tracker.classList.remove("link-grow"));
   });
+
 });
 
+let invisible = [];
 
 /* content of the page */
 headingText.innerHTML = "Hello!";
@@ -117,8 +163,5 @@ mainText.innerHTML = "My name is Theo Tam<br>Welcome to my page. <br>Let me intr
 
 headingText2.innerHTML = "About Me";
 
+
 headingText4.innerHTML = "Trait";
-textbox1.innerHTML = "MindMap";
-textbox2.innerHTML = "TeamWork";
-textbox3.innerHTML = "Language";
-textbox4.innerHTML = "Personality";
