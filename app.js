@@ -97,9 +97,16 @@ imgbox[3].classList.add("rotate-10");
 
 imgbox.forEach((value, index) => {
   value.addEventListener("click", ()=>{
-    console.log(value);
     value.classList.remove("rotate10");
     value.classList.remove("rotate-10");      
+  });
+
+  value.addEventListener(("mouseover"), () => {
+    cursorTracker.forEach(tracker => tracker.classList.add("link-grow"));
+  });
+
+  value.addEventListener(("mouseleave"), () => {
+    cursorTracker.forEach(tracker => tracker.classList.remove("link-grow"));
   });
 });
 
@@ -115,4 +122,3 @@ textbox1.innerHTML = "MindMap";
 textbox2.innerHTML = "TeamWork";
 textbox3.innerHTML = "Language";
 textbox4.innerHTML = "Personality";
-
