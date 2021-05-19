@@ -11,8 +11,8 @@
 |---|:---:|
 | Homepage | Drafted |
 | About Me | Drafted |
-| Resume | Drafted |
-| Goal | Drafted |
+| FAC | Drafted |
+| Trait | Drafted |
 | Contact |  |
 
 ## Features that working on
