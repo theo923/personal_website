@@ -9,10 +9,10 @@
 
 | Content | Support |
 |---|:---:|
-| Homepage |  |
-| About Me |  |
-| Resume |  |
-| Goal |  |
+| Homepage | Drafted |
+| About Me | Drafted |
+| Resume | Drafted |
+| Goal | Drafted |
 | Contact |  |
 
 ## Features that working on

@@ -62,19 +62,57 @@ box2.addEventListener('mouseleave', () =>{                                    //
   cursorTracker.forEach(tracker => tracker.classList.remove("color-change")); // change the color back to default by deleting class and ready for the replay
 });
 
-
-
 let headingText = document.querySelector('#box1 .content-box .headingText');   // heading of the first box
 let headingText2 = document.querySelector('#box2 .content-box .headingText');  // heading of the second box
 let headingText3 = document.querySelector('#box3 .content-box .headingText');  // heading of the third box
+let headingText4 = document.querySelector('#box4 .content-box .headingText'); 
 
 let mainText = document.querySelector('#box1 .content-box .mainText');         // content of the first box
 let mainText2 = document.querySelector('#box2 .content-box .mainText');        // content of the second box
-let mainText3 = document.querySelector('#box3 .content-box .mainText');        // content of the third box
+let mainText3 = document.querySelector('#box3 .content-box .mainText'); 
+let mainText4 = document.querySelector('#box4 .content-box .mainText');  
+
+let valueText = document.querySelector('#box3 .content-box2 #value');        // content of the third box
+let communityText = document.querySelector('#box3 .content-box2 #community');
+let attitudeText = document.querySelector('#box3 .content-box2 #attitude');
+let locationText = document.querySelector('#box3 .content-box2 #location');
+let supportText = document.querySelector('#box3 .content-box2 #support');
+
+let textbox1 = document.querySelector('#box4 #textbox1');
+let textbox2 = document.querySelector('#box4 #textbox2');
+let textbox3 = document.querySelector('#box4 #textbox3');
+let textbox4 = document.querySelector('#box4 #textbox4');
+
+
+let imgbox = [];
+imgbox.push(document.querySelector('#box4 #imgbox1'));
+imgbox.push(document.querySelector('#box4 #imgbox2'));
+imgbox.push(document.querySelector('#box4 #imgbox3'));
+imgbox.push(document.querySelector('#box4 #imgbox4'));
+
+imgbox[0].classList.add("rotate10");
+imgbox[1].classList.add("rotate-10");
+imgbox[2].classList.add("rotate10");
+imgbox[3].classList.add("rotate-10");
+
+imgbox.forEach((value, index) => {
+  value.addEventListener("click", ()=>{
+    console.log(value);
+    value.classList.remove("rotate10");
+    value.classList.remove("rotate-10");      
+  });
+});
 
 
 /* content of the page */
 headingText.innerHTML = "Hello!";
-mainText.innerHTML = "I am Theo Tam<br>Welcome to my page.<br>Let me introduce myself to you!";
-headingText2.innerHTML = "He6456o!";
-mainText2.innerHTML = "I am Theo Tam<br>Welcome to my page.<br>Let me introduce myself to you!";
+mainText.innerHTML = "My name is Theo Tam<br>Welcome to my page. <br>Let me introduce myself to you!";
+
+headingText2.innerHTML = "About Me";
+
+headingText4.innerHTML = "Trait";
+textbox1.innerHTML = "MindMap";
+textbox2.innerHTML = "TeamWork";
+textbox3.innerHTML = "Language";
+textbox4.innerHTML = "Personality";
+
