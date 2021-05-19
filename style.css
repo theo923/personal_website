@@ -156,6 +156,12 @@ body{
   width: 100%;
 }
 
+#box5 {
+  background: #343434;
+  height: 1500px;
+  width: 100%;
+}
+
 /*==================== default setting for box ====================*/
 
 .content-box {
@@ -212,6 +218,7 @@ body{
 }
 
 #box1 .mainText {
+  font-size: 30px;
   color: #000000;
 }
 
@@ -287,6 +294,18 @@ body{
   height: 300px;
   transition: 1s linear;
   border: 10px solid #FFFFFF;
+}
+
+#box5 .content-box {
+  top: 15%;
+}
+
+#box5 .headingText {
+  color: #FFFFFF;
+}
+
+#box5 .mainText {
+  color: #FFFFFF;
 }
 
 /*==================== navigation bar ====================*/
@@ -377,7 +396,7 @@ body{
   }
 
   #box4 {
-    height: 170vh;
+    height: 230vh;
   }
 
   #box4 .content-box2 {
@@ -451,7 +470,7 @@ body{
   }
 
   #box4 {
-    height: 270vh;
+    height: 320vh;
   }
 
   #box4 .gridBox1 {
@@ -517,6 +536,10 @@ body{
 
   #box3 {
     height: 240vh;
+  }
+
+  #box4 {
+    height: 330vh;
   }
 
 }

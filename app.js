@@ -55,10 +55,17 @@ function scroll() {
 let barContainer = document.querySelector(".bar-container");  // navigation bar container
 box2.addEventListener('mouseover', () =>{                                     // track if mouse move over to the navigation bar's boxs
   cursorTracker.forEach(tracker => tracker.classList.add("color-change"));    // change the color of the cursor so user can notice the cursor better in white background
-  
 });
 
 box2.addEventListener('mouseleave', () =>{                                    // track if mouse leave from the navigation bar's boxs
+  cursorTracker.forEach(tracker => tracker.classList.remove("color-change")); // change the color back to default by deleting class and ready for the replay
+});
+
+box1.addEventListener('mouseover', () =>{                                     // track if mouse move over to the navigation bar's boxs
+  cursorTracker.forEach(tracker => tracker.classList.add("color-change"));    // change the color of the cursor so user can notice the cursor better in white background
+});
+
+box1.addEventListener('mouseleave', () =>{                                    // track if mouse leave from the navigation bar's boxs
   cursorTracker.forEach(tracker => tracker.classList.remove("color-change")); // change the color back to default by deleting class and ready for the replay
 });
 
@@ -66,11 +73,13 @@ let headingText = document.querySelector('#box1 .content-box .headingText');   /
 let headingText2 = document.querySelector('#box2 .content-box .headingText');  // heading of the second box
 let headingText3 = document.querySelector('#box3 .content-box .headingText');  // heading of the third box
 let headingText4 = document.querySelector('#box4 .content-box .headingText'); 
+let headingText5 = document.querySelector('#box5 .content-box .headingText'); 
 
 let mainText = document.querySelector('#box1 .content-box .mainText');         // content of the first box
 let mainText2 = document.querySelector('#box2 .content-box .mainText');        // content of the second box
 let mainText3 = document.querySelector('#box3 .content-box .mainText'); 
 let mainText4 = document.querySelector('#box4 .content-box .mainText');  
+let mainText5 = document.querySelector('#box5 .content-box .mainText');  
 
 let valueText = document.querySelector('#box3 .content-box2 #value');        // content of the third box
 let communityText = document.querySelector('#box3 .content-box2 #community');
@@ -130,7 +139,7 @@ imgbox.forEach((value, index) => {
 
   gridbox[index].addEventListener("click", ()=>{
     value.classList.remove("rotate10");
-    value.classList.remove("rotate-10");    
+    value.classList.remove("rotate-10");
     getContext(index);
     textbox.forEach((val, idx) => {
       if(idx != index && idx % 2 == 0) {
@@ -145,11 +154,11 @@ imgbox.forEach((value, index) => {
 
   });  
 
-  value.addEventListener(("mouseover"), () => {
+  gridbox[index].addEventListener(("mouseover"), () => {
     cursorTracker.forEach(tracker => tracker.classList.add("link-grow"));
   });
 
-  value.addEventListener(("mouseleave"), () => {
+  gridbox[index].addEventListener(("mouseleave"), () => {
     cursorTracker.forEach(tracker => tracker.classList.remove("link-grow"));
   });
 
@@ -163,5 +172,8 @@ mainText.innerHTML = "My name is Theo Tam<br>Welcome to my page. <br>Let me intr
 
 headingText2.innerHTML = "About Me";
 
+headingText3.innerHTML = "Reasons for Applying next cohort";
 
 headingText4.innerHTML = "Trait";
+
+headingText5.innerHTML = "Contact";
