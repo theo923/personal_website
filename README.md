@@ -9,11 +9,11 @@
 
 | Content | Support |
 |---|:---:|
-| Homepage | Drafted |
+| Homepage | ✔️ |
 | About Me | Drafted |
 | FAC | Drafted |
 | Trait | Drafted |
-| Contact |  |
+| Profile | ✔️ |
 
 ## Features that working on
 
