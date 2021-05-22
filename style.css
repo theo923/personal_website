@@ -320,15 +320,29 @@ body{
   color: #FFFFFF;
 }
 
-/*==================== Image Carousel ====================*/
+/*==================== image carousel ====================*/
 #imageset{
   display: inline-block;
   height: 50vh;
+
 }
 
 .image {
   width: 30vw;
   height: auto;
+  border: 5px solid rgb(63, 58, 58);
+}
+
+#imgDescription {
+  display: flex;
+  flex-direction: column;
+  font-family: Raleway;
+  position: relative;
+  align-items: center;
+  font-size: 40px;
+  color: #000;
+  transition: ease 0.8s;
+  top: 0%;
 }
 
 .hidden {
@@ -464,12 +478,13 @@ body{
 
   #imageset{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   
   .image {
-    width: 50vw;
+    width: 60vw;
     height: auto;
   }
 
@@ -490,7 +505,6 @@ body{
     left: 0%;
     width: 100%;
   }
-
 
 
 }

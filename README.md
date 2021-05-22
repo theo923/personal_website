@@ -25,3 +25,5 @@
 | Animated Buttons | ✔️ |
 | Apply Color using Color Palette | ✔️ |
 | Dynamic Scroll Bar | ✔️ |
+| Rotation of Photo | ✔️ |
+| Image Carousel | ✔️ |

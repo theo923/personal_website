@@ -9,6 +9,22 @@ function cursor(info){
   });
 }
 
+function addLinkGrow() {
+  cursorTracker.forEach(tracker => tracker.classList.add("link-grow"));   // add effect on the cursor
+}
+
+function removeLinkGrow() {
+  cursorTracker.forEach(tracker => tracker.classList.remove("link-grow"));   // delete effect on the cursor  
+}
+
+function addColorChange() {
+  cursorTracker.forEach(tracker => tracker.classList.add("color-change"));    // change the color of the cursor so user can notice the cursor better in white background
+}
+
+function removeColorChange() {
+  cursorTracker.forEach(tracker => tracker.classList.remove("color-change")); // change the color back to default by deleting class and ready for the replay
+}
+
 /*==================== Div ====================*/
 
 let box1 = document.querySelector("#box1");             // box1
@@ -78,15 +94,8 @@ function scroll() {
 let barItem = Array.from(document.getElementsByClassName('bar-item'));  // navigation bar's buttons
 barItem.forEach((item) => {                             // iterate every item
   let target = document.getElementById(item.id);        // using item.id(string) to find the object so event listener can be add
-  target.addEventListener('mouseover', () =>{           // trigger when the mouse move over to the button
-    cursorTracker.forEach(tracker => tracker.classList.add("link-grow"));   // add effect on the cursor
-  });
-  
-  target.addEventListener('mouseleave', () =>{          // trigger when the mouse leave from the button
-    cursorTracker.forEach(tracker => tracker.classList.remove("link-grow"));   // delete effect on the cursor
-  });
-
-  console.log(item.id);
+  target.addEventListener('mouseover', addLinkGrow);     // trigger when the mouse move over to the button
+  target.addEventListener('mouseleave', removeLinkGrow);       // trigger when the mouse leave from the button
 
   target.addEventListener('click', () =>{          // trigger when the mouse leave from the button
     console.log(item.id);
@@ -100,21 +109,10 @@ barItem.forEach((item) => {                             // iterate every item
 /*==================== Special pointer ====================*/
 
 let barContainer = document.querySelector(".bar-container");  // navigation bar container
-box2.addEventListener('mouseover', () =>{                                     // track if mouse move over to the navigation bar's boxs
-  cursorTracker.forEach(tracker => tracker.classList.add("color-change"));    // change the color of the cursor so user can notice the cursor better in white background
-});
-
-box2.addEventListener('mouseleave', () =>{                                    // track if mouse leave from the navigation bar's boxs
-  cursorTracker.forEach(tracker => tracker.classList.remove("color-change")); // change the color back to default by deleting class and ready for the replay
-});
-
-box1.addEventListener('mouseover', () =>{                                     // track if mouse move over to the navigation bar's boxs
-  cursorTracker.forEach(tracker => tracker.classList.add("color-change"));    // change the color of the cursor so user can notice the cursor better in white background
-});
-
-box1.addEventListener('mouseleave', () =>{                                    // track if mouse leave from the navigation bar's boxs
-  cursorTracker.forEach(tracker => tracker.classList.remove("color-change")); // change the color back to default by deleting class and ready for the replay
-});
+box2.addEventListener('mouseover', addColorChange);                         // track if mouse move over to the navigation bar's boxs
+box2.addEventListener('mouseleave', removeColorChange);                     // track if mouse leave from the navigation bar's boxs
+box1.addEventListener('mouseover', addColorChange);                         // track if mouse move over to the navigation bar's boxs
+box1.addEventListener('mouseleave', removeColorChange);                     // track if mouse leave from the navigation bar's boxs
 
 /*==================== Content & Image ====================*/
 
@@ -198,17 +196,9 @@ imgbox.forEach((value, index) => {
         getTitle(idx);
       }
     });
-
   });  
-
-  gridbox[index].addEventListener(("mouseover"), () => {                          // prompt user that the box can be clicked
-    cursorTracker.forEach(tracker => tracker.classList.add("link-grow"));
-  });
-
-  gridbox[index].addEventListener(("mouseleave"), () => {                         // return to its original state
-    cursorTracker.forEach(tracker => tracker.classList.remove("link-grow"));
-  });
-
+  gridbox[index].addEventListener("mouseover", addLinkGrow);                      // prompt user that the box can be clicked
+  gridbox[index].addEventListener("mouseleave", removeLinkGrow);                  // return to its original state
 });
 
 let icon = [];
@@ -217,13 +207,8 @@ icon.push(document.querySelector('#box5 #freecodecampButton'));                 
 icon.push(document.querySelector('#box5 #codewarsButton'));                       // codewarsButton
 
 icon.forEach((val, idx) => {
-  val.addEventListener(("mouseover"), () => {                                     // trigger event if cursor move over the icon
-    cursorTracker.forEach(tracker => tracker.classList.add("link-grow"));         // prompt user that the image can be clicked
-  });
-
-  val.addEventListener(("mouseleave"), () => {                                    // trigger event if cursor leave the icon
-    cursorTracker.forEach(tracker => tracker.classList.remove("link-grow"));      // return to its original state
-  });
+  val.addEventListener("mouseover", addLinkGrow);                                 // trigger event if cursor move over the icon
+  val.addEventListener("mouseleave", removeLinkGrow);                             // trigger event if cursor leave the icon
 });
 
 let invisible = [];
@@ -240,6 +225,31 @@ backToTop.addEventListener("mouseleave", () =>{                                 
 backToTop.addEventListener("click", () =>{                                        // trigger event if user clicked the image
   window.scrollTo(0,0);                                                           // scroll to the top of the page
 });
+
+/*==================== Image Carousel ====================*/
+
+let img = Array.from(document.getElementsByClassName("image"));
+let imgDescription = document.querySelector("#imgDescription");
+let imageset = document.querySelector(".imageCarousel");
+let description = [''];
+let currentImageIndex = 0;
+imgDescription.innerHTML = description[currentImageIndex];
+
+function imageCarousel () {
+  img[currentImageIndex].classList.add("hidden");
+  if(currentImageIndex >= img.length - 1){ currentImageIndex = -1; }
+  img[++currentImageIndex].classList.remove("hidden");
+  imgDescription.innerHTML = description[currentImageIndex];
+}
+
+imageset.addEventListener("mouseover", addLinkGrow);
+imageset.addEventListener("mouseleave", removeLinkGrow);
+
+img.forEach((val, idx) => {
+  val.addEventListener("click", imageCarousel);
+})
+
+let run = setInterval( imageCarousel, 5000);
 
 /*==================== Text ====================*/
 
