@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
 
@@ -8,6 +8,8 @@
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+
 
   <!-- import css -->
   <link rel="stylesheet" href="style.css">
@@ -16,7 +18,7 @@
 
 <body>
   <!-- content contain all boxs of the page -->
-  <section id="content-container">
+  <div id="content-container">
     <!-- box1 -->
     <div id="box1" class="box">
       <!-- animated background -->
@@ -47,16 +49,16 @@
         <p class="mainText"></p>
       </div>
       <div id="imageset" class="imageCarousel">
-        <img class="image " src="img/hongkong.jpg"></img>
-        <img class="image hidden" src="img/lionrock.jpg"></img>
-        <img class="image hidden" src="img/CUHK.jpg"></img>
-        <img class="image hidden" src="img/Values.jpg"></img>
-        <img class="image hidden" src="img/london.jpg"></img>
-        <img class="image hidden" src="img/Dream.jpeg"></img>
-        <img class="image hidden" src="img/DataStructures2.png"></img>
-        <img class="image hidden" src="img/JAVA I.png"></img>
-        <img class="image hidden" src="img/JAVA II.png"></img>
-        <img class="image hidden" src="img/JAVA III-1.png"></img>
+        <img class="image " src="img/hongkong.jpg" alt="HongKong">
+        <img class="image hidden" src="img/lionrock.jpg" alt="LionRock">
+        <img class="image hidden" src="img/CUHK.jpg" alt="The_Unviersity_I_studied before">
+        <img class="image hidden" src="img/Values.jpg" alt="Values">
+        <img class="image hidden" src="img/london.jpg" alt="London">
+        <img class="image hidden" src="img/Dream.jpeg" alt="Dream">
+        <img class="image hidden" src="img/DataStructures2.png" alt="Data_Structures_MindMap">
+        <img class="image hidden" src="img/JAVAI.png" alt="Details_of_the_mindmap">
+        <img class="image hidden" src="img/JAVAII.png" alt="Details_of_the_mindmap">
+        <img class="image hidden" src="img/JAVAIII-1.png" alt="Details_of_the_mindmap">
         <p id="imgDescription"></p>
       </div>
     </div>
@@ -69,15 +71,15 @@
       </div>
 
       <div class="content-box2">
-        <img id="valueImg" class="reason" src="./img/Image 5.webp" alt="photo"></img>
+        <img id="valueImg" class="reason" src="./img/Image5.webp" alt="value">
         <p id="value" class="mainText"></p>
-        <img id="communityImg"  class="reason" src="./img/Image 6.webp" alt="photo"></img>
+        <img id="communityImg"  class="reason" src="./img/Image6.webp" alt="community">
         <p id="community" class="mainText"></p>
-        <img id="attitudeImg"  class="reason" src="./img/Image 7.webp" alt="photo"></img>
+        <img id="attitudeImg"  class="reason" src="./img/Image7.webp" alt="attitude">
         <p id="attitude" class="mainText"></p>
-        <img id="locationImg"  class="reason" src="./img/Image 8.webp" alt="photo"></img>
+        <img id="locationImg"  class="reason" src="./img/Image8.webp" alt="location">
         <p id="location" class="mainText"></p>
-        <img id="supportImg"  class="reason" src="./img/Image 9.webp" alt="photo"></img>
+        <img id="supportImg"  class="reason" src="./img/Image9.webp" alt="support">
         <p id="support" class="mainText"></p>
       </div>
     </div>
@@ -91,23 +93,23 @@
 
       <div class="content-box2">
         <div id="gridbox1" class="gridBox1">
-          <img src="./img/mindmap.jpg" id="imgbox1" class="imgBox"></img>
+          <img src="./img/mindmap.jpg" id="imgbox1" class="imgBox" alt="mindmap">
           <div id="textbox1" class="textBox1"></div>
         </div>
 
         <div id="gridbox2" class="gridBox2">
           <div id="textbox2" class="textBox2"></div>
-          <img src="./img/football.jpg" id="imgbox2" class="imgBox2"></img>
+          <img src="./img/football.jpg" id="imgbox2" class="imgBox2" alt="football">
         </div>
 
         <div id="gridbox3" class="gridBox1">
-          <img src="./img/language.jpg" id="imgbox3" class="imgBox"></img>
+          <img src="./img/language.jpg" id="imgbox3" class="imgBox" alt="language">
           <div id="textbox3" class="textBox1"></div>
         </div>
 
         <div id="gridbox4" class="gridBox2">
           <div id="textbox4" class="textBox2"></div>
-          <img src="./img/personality.jpg" id="imgbox4" class="imgBox2"></img>
+          <img src="./img/personality.jpg" id="imgbox4" class="imgBox2" alt="personality">
         </div>
       </div>
     </div>
@@ -116,26 +118,32 @@
     <div id="box5" class="box">
       <div class="content-box">
         <p class="headingText"></p>
-        <p class="mainText"></p>
-        <div class ="iconContainer">
-          <a href="https://github.com/theo923/personal_website" target="_blank">
-          <button class="iconButton" id="githubButton">
-            <img class="icon" src="./img/github.png" alt="githubIcon>"></img>
-          </button></a>
-          <a href="https://www.freecodecamp.org/theotam" target="_blank">
-          <button class="iconButton" id="freecodecampButton">
-            <img class="icon" src="./img/freecodecamp.png" alt="freecodecampIcon>"></img>
-          </button></a>
-          <a href="https://www.codewars.com/users/Theo%20Tam" target="_blank">
-          <button class="iconButton" id="codewarsButton">
-            <img class="icon" src="./img/codewars.svg" alt="codewarsIcon>"></img>
-          </button></a>
-        </div>
-        <img id="top" src="img/top.jpg" alt="backtothetop"></img>
+        <p class="mainText"></p>    
       </div>
-    </div>
 
-  </section>
+      <div class ="iconContainer">
+        <a href="https://github.com/theo923/personal_website" target="_blank">
+          <button class="iconButton" id="githubButton">
+            <img class="icon" src="./img/github.png" alt="githubIcon>">
+          </button>
+        </a>
+
+        <a href="https://www.freecodecamp.org/theotam" target="_blank">
+          <button class="iconButton" id="freecodecampButton">
+            <img class="icon" src="./img/freecodecamp.png" alt="freecodecampIcon>">
+          </button>
+        </a>
+
+        <a href="https://www.codewars.com/users/Theo%20Tam" target="_blank">
+          <button class="iconButton" id="codewarsButton">
+            <img class="icon" src="./img/codewars.svg" alt="codewarsIcon>">
+          </button>
+        </a>
+      </div>
+      
+    </div>
+    <div id="top" alt="backtothetop">
+  </div>
 
 <!-- cursor -->
 <div class="cursor-container">
@@ -145,23 +153,12 @@
 </div>
 
 <!-- navigation bar -->
-<section id="navigation-bar">
-  <div class = "bar-container" >
-    <button id = "naviButton1" class = "bar-item">PROFILE<br>━━━━━━</br></button>
-    <button id = "naviButton2" class = "bar-item">TRAIT<br>━━━━━━</br></button>
-    <button id = "naviButton3" class = "bar-item">FAC<br>━━━━━━</br></button>
-    <button id = "naviButton4" class = "bar-item">ABOUT ME<br>━━━━━━</br></button>
-  </div>
-</section>
-
-<!-- background music (still finding for a better source) -->
-<figure id="background-music1">
-    <audio
-        autoplay
-        onloadstart="this.volume=0.1"
-        src="https://dl1001.ymcdn.site/04a6adc17c6bea7051b616dd87513469/RYhKUKzD6IQ?dl=1">
-    </audio>
-</figure>
+<div class = "bar-container" >
+  <button id = "naviButton1" class = "bar-item">PROFILE<br>━━━━━━</button>
+  <button id = "naviButton2" class = "bar-item">TRAIT<br>━━━━━━</button>
+  <button id = "naviButton3" class = "bar-item">FAC<br>━━━━━━</button>
+  <button id = "naviButton4" class = "bar-item">ABOUT ME<br>━━━━━━</button>
+</div>
 
 <!-- scroll bar -->
 <div class="scrollBar"></div>

@@ -1,3 +1,15 @@
+/*==================== variable ====================*/
+:root {
+  --shadowBoxBefore: inset 0 0 0 0 #FFFFFF;
+  --shadowBoxAfter: inset 300px 0 0 0 #FFFFFF; 
+  --shadowBoxAfterFaster: inset 600px 0 0 0 #FFFFFF; 
+  --hompageFont: 'Pattaya', sans-serif;
+  --headerFont: 'Exo', sans-serif;
+  --mainTextFont: Raleway;
+  --headerFontSize: 60px;
+  --mainTextFontSize: 20px;
+}
+
 /*==================== hide the default side bar ====================*/
 
 html {
@@ -142,6 +154,10 @@ body{
   background: #E1F2FE;
   height: 1200px;
   width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 #box3 {
@@ -160,6 +176,10 @@ body{
   background: #343434;
   height: 1200px;
   width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /*==================== default setting for box ====================*/
@@ -174,14 +194,14 @@ body{
 }
 
 .headingText {
-  font-family: 'Exo', sans-serif;
-  font-size: 60px;
+  font-family: var(--headerFont);
+  font-size: var(--headerFontSize);
   text-align: left;
 }
 
 .mainText {
-  font-family: Raleway;
-  font-size: 20px;
+  font-family: var(--mainTextFont);
+  font-size: var(--mainTextFontSize);
   text-align: left;
 }
 
@@ -189,7 +209,6 @@ body{
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 5%;
-  align-items: left;
   justify-items: left;
   background-color: #98D2EB;
 }
@@ -198,47 +217,40 @@ body{
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 5%;
-  align-items: right;
   justify-items: right;
   background-color: cadetblue;
 }
 
 .imgBox {
-  position: relative;
   width: 400px;
   height: 300px;
-  transition: 1s linear;
+  transition: all 1s linear;
   border: 10px solid #FFFFFF;
 }
 
 .imgBox2 {
-  position: relative;
   width: 400px;
   height: 300px;
-  transition: 1s linear;
+  transition: all 1s linear;
   border: 10px solid #FFFFFF;
 }
 
 .textBox1 {
   display: flex;
-  font-family: Raleway;
-  position: relative;
+  font-family: var(--mainTextFont);
   align-items: center;
-  justify-items: center;
-  font-size: 60px;
+  font-size: var(--headerFontSize);
   color: #FFFFFF;
   transition: ease 0.8s;
 }
 
 .textBox2 {
   display: flex;
-  font-family: Raleway;
-  position: relative;
+  font-family: var(--mainTextFont);
   align-items: center;
-  justify-items: center;
-  font-size: 60px;
+  font-size: var(--headerFontSize);
   color: #FFFFFF;
-  transition: ease 0.8s;
+  transition: all 0.8s ease;
 }
 
 .iconButton {
@@ -249,7 +261,7 @@ body{
 .icon {
   width: 100px;
   height: 100px;
-  margin: 4em;
+  margin: 1em 3em 1em 3em;
 }
 
 
@@ -261,19 +273,21 @@ body{
 }
 
 #box1 .headingText {
+  font-size: 80px;
   color: #000000;
+  font-family: var(--hompageFont);
 }
 
 #box1 .mainText {
-  font-size: 30px;
+  font-size: 50px;
   color: #000000;
+  font-family: var(--hompageFont);
 }
 
 #box2 .content-box {
-  display: inline-block;
   top: 7%;
   opacity: 0;
-  width: 50vh;
+  flex-basis: 40%;
 }
 
 #box3 .headingText {
@@ -285,7 +299,7 @@ body{
 }
 
 #box3 .content-box {
-  top: 5%;
+  top: 3%;
   opacity: 0;
 }
 
@@ -297,23 +311,40 @@ body{
   opacity: 0;
 }
 
+.reason {
+  align-self: center;
+}
+
 #box4 .content-box {
-  top: 3%;
   color: #FFFFFF;
-  opacity: 1;
 }
 
 #box4 .content-box2 {
-  position: relative;
   display: grid;
-  left: 10%;
-  width: 80%;
+  grid-template-columns: 10% 1fr 10% ;
+  grid-template-areas: ". g1 ." ". g2 ." ". g3 ." ". g4 .";
   gap: 2em;
   background-color: rgba(0,0,0, 0.4);
 }
 
+#gridbox1{
+  grid-area: g1;
+}
+
+#gridbox2{
+  grid-area: g2;
+}
+
+#gridbox3{
+  grid-area: g3;
+}
+
+#gridbox4{
+  grid-area: g4;
+}
+
 #box5 .content-box {
-  height: 100%;
+  margin-bottom: 0;
 }
 
 #box5 .headingText {
@@ -321,63 +352,54 @@ body{
 }
 
 /*==================== image carousel ====================*/
-#imageset{
-  display: inline-block;
-  height: 50vh;
 
-}
+
 
 .image {
-  width: 30vw;
+  width: 40vw;
   height: auto;
   border: 5px solid rgb(63, 58, 58);
 }
 
 #imgDescription {
-  display: flex;
-  flex-direction: column;
-  font-family: Raleway;
-  position: relative;
-  align-items: center;
-  font-size: 40px;
+  font-family: var(--mainTextFont);
+  font-size: var(--mainTextFontSize);
   color: #000;
-  transition: ease 0.8s;
-  top: 0%;
+  transition: all 0.8s ease ;
 }
 
 .hidden {
   display: none;
 }
 
-.visible {
-  display: block;
-}
-
 /*==================== icon ====================*/
-
 .iconContainer {
-  top: 30%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  margin-bottom: 40%;
 }
 
 .iconButton {
-  box-shadow: inset 0 0 0 0 #FFFFFF; 
-  transition: ease-out 0.8s;
+  box-shadow: var(--shadowBoxBefore); 
+  transition: all 0.8s ease-out ;
 }
 
 .iconButton:hover { 
-  box-shadow: inset 300px 0 0 0 #FFFFFF;
+  box-shadow: var(--shadowBoxAfterFaster);
   cursor: none;
 }
 
 #top {
-  position: relative;
+  position: fixed;
+  background-image: url("img/top.jpg");
+  background-size: cover;
   height: 120px;
   width: 90px;
-  top: 30%;
-  left: 95%;
+  right: 30px;
+  bottom: 10%;
+  transition: all 0.1s linear;
+}
+
+#top:hover{
+  background-image: url("img/top2.png");
 }
 
 /*==================== navigation bar ====================*/
@@ -389,7 +411,6 @@ body{
   height: 70px;
   text-align: left;
   background-color: rgb(0, 0, 0);
-  position: absolute;
   bottom: 0;
   position: fixed;
   z-index: 2;
@@ -398,20 +419,19 @@ body{
 .bar-item {
   width: 150px;
   background-color: rgba(0,0,0, 0.4);
-  margin: 10px 10px 10px 10px;
+  margin: 10px;
   border: none;
-  transition: ease-out 0.8s;
-  box-shadow: inset 0 0 0 0 #FFFFFF;  
-
+  transition: all 0.8s ease-out ;
+  box-shadow: var(--shadowBoxBefore);;  
   text-align: left;
-  font-family: Raleway;
-  font-size: 20px;
+  font-family: var(--mainTextFont);
+  font-size: var(--mainTextFontSize);
   color: #FFFFFF;
   line-height: 18px;
 }
 
 .bar-item:hover { 
-  box-shadow: inset 300px 0 0 0 #FFFFFF;
+  box-shadow: var(--shadowBoxAfter);;
   cursor: none;
 }
   
@@ -440,26 +460,35 @@ body{
   position: fixed;
   top: 0;
   right: 0;
-  transition: 1s linear;
+  transition: all 1s linear;
 }
 
 /*==================== adjustment for smartphone ====================*/
 
 @media (max-width: 1300px){
 
-  #box4 .content-box{
-    top: 0%;
-  }
-
   #box4 .content-box2 {
-    left: 10%;
-    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-areas: "g1" "g2" "g3" "g4";
+    background-color: rgba(0,0,0, 0.4);
+    padding-bottom: 400px;
   }
 }
 
 
 @media (max-width: 1100px){
   #box2 {
+    height: 200vh;
+  }
+
+  #box2 .content-box {
+    opacity: 0;
+    flex-basis: 100%;
+  }
+
+  .image {
+    width: 60vw;
     height: auto;
   }
 
@@ -471,27 +500,12 @@ body{
     height: auto;
   }
 
-  #box2 .content-box {
-    top: 2%;
-    width: 90%;
-  }
-
   #imageset{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  
-  .image {
-    width: 60vw;
-    height: auto;
-  }
-
-  #box4 .content-box2 {
-    left: 5%;
-    width: 90%;
-  }
 
   #box4 .gridBox1 {
     margin: 0%;
@@ -501,64 +515,33 @@ body{
     margin: 0%;
   }
 
-  #box4 .content-box2 {
-    left: 0%;
-    width: 100%;
-  }
-
-
 }
 
 @media (max-width: 900px){
-
   .image {
     width: 80vw;
     height: auto;
   }
 
-  #box3 .headingText {
-    font-size: 50px;
-  }
-
   #box3 .content-box2 {
-    grid-template-columns: 100%;
-  }
-
-  #box4 .content-box{
-    height: auto;
-    margin-bottom: 30em;
+    grid-template-columns: 1fr;
   }
 
   #box4 .gridBox1 {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr;
     justify-items: center;
-    margin-bottom: 50%;
+    padding: 10% 0 10% 0;
   }
 
   #box4 .gridBox2 {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr;
     justify-items: center;
-    margin-bottom: 50%;
-  }
-
-  .imgBox {
-    top: -90%;
-    left: -5%;
-  }
-
-  .imgBox2 {
-    top: -90%;
-    left: -70%;
-  }
-
-  .textBox1 {
-    left: -100%;
+    padding: 10% 0 10% 0;
   }
 
   .textBox2 {
-    left: 5%;
+    order:1;
   }
-
 
 }
 
@@ -574,16 +557,16 @@ body{
   }
 
   .icon {
-    margin: 1em;
+    margin: 3em;
+    width: 40%;
+    height: auto;
   }
-
 }
 
 /*==================== cursor ====================*/
   
 .cursor {
   background-color: aliceblue;
-  border: 1px solid aliceblue;
   position: absolute;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -659,7 +642,7 @@ body{
 
 .link-grow {
   transform: scale(2);
-  transition: ease-out 0.2s;
+  transition: all 0.2s ease-out ;
   background-color: #00171F;
   border: none;
 }
