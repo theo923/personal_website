@@ -218,6 +218,9 @@ backToTop.addEventListener("click", () =>{                                      
   window.scrollTo(0,0);                                                           // scroll to the top of the page
 });
 
+backToTop.addEventListener("mouseover", addLinkGrow);                                 // trigger event if cursor move over the icon
+backToTop.addEventListener("mouseleave", removeLinkGrow);                             // trigger event if cursor leave the icon
+
 /*==================== Image Carousel ====================*/
 
 let img = Array.from(document.getElementsByClassName("image"));
@@ -243,7 +246,6 @@ let run = setInterval( imageCarousel, 5000);
 
 img.forEach((val, idx) => {
   val.addEventListener("click", imageCarousel);
-
 })
 
 

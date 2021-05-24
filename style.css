@@ -177,7 +177,7 @@ body{
   height: 1200px;
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
@@ -311,6 +311,12 @@ body{
   opacity: 0;
 }
 
+#box3 .content-box2 p {
+  padding: 15px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+
 .reason {
   align-self: center;
 }
@@ -353,7 +359,12 @@ body{
 
 /*==================== image carousel ====================*/
 
-
+#imageset{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .image {
   width: 40vw;
@@ -472,14 +483,14 @@ body{
     grid-template-columns: 1fr ;
     grid-template-areas: "g1" "g2" "g3" "g4";
     background-color: rgba(0,0,0, 0.4);
-    padding-bottom: 400px;
+    padding-bottom: 500;
   }
 }
 
 
 @media (max-width: 1100px){
   #box2 {
-    height: 200vh;
+    height: 130vh;
   }
 
   #box2 .content-box {
@@ -498,13 +509,6 @@ body{
 
   #box4 {
     height: auto;
-  }
-
-  #imageset{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   #box4 .gridBox1 {
@@ -556,9 +560,16 @@ body{
     width: 7px;
   }
 
+  .iconContainer{
+    width: 100%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+  }
+
   .icon {
     margin: 3em;
-    width: 40%;
+    width: 50%;
     height: auto;
   }
 }

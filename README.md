@@ -18,11 +18,11 @@
 | Features | Support |
 |---|:---:|
 | Animated Background | ✔️ |
-| Special Cursor(with color change) | ✔️ |
+| Dynamic Cursor(with size & color change) | ✔️ |
 | Navigation Bar | ✔️ |
 | Animated Buttons | ✔️ |
-| Apply Color using Color Palette | ✔️ |
 | Dynamic Scroll Bar | ✔️ |
 | Rotation of Photo | ✔️ |
 | Image Carousel | ✔️ |
 | Responsive Design | ✔️ |
+| Fade-in Passage | ✔️ |
