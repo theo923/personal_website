@@ -100,7 +100,7 @@ barItem.forEach((item) => {                             // iterate every item
   target.addEventListener('click', () =>{          // trigger when the mouse leave from the button
     console.log(item.id);
     if(item.id === 'naviButton1'){ window.scrollTo(0,maxHeight);}                                         // scroll to the section
-    if(item.id === 'naviButton2'){ window.scrollTo(0,box2.offsetHeight + box3.offsetHeight + box4.offsetHeight);}             // scroll to the section
+    if(item.id === 'naviButton2'){ window.scrollTo(0,box3.offsetHeight + box4.offsetHeight);}             // scroll to the section
     if(item.id === 'naviButton3'){ window.scrollTo(0,box2.offsetHeight + box3.offsetHeight);}             // scroll to the section
     if(item.id === 'naviButton4'){ window.scrollTo(0,box2.offsetHeight);}                                 // scroll to the section
   });
@@ -256,7 +256,7 @@ headingText1.innerHTML = "Hello!";
 mainText1.innerHTML = "My name is Theo Tam<br>Welcome to my page. <br>Let me introduce myself to you!";
 
 headingText2.innerHTML = "About Me";
-mainText2.innerHTML = "Hi! I am Theo. I am a HongKonger who is passionate on coding, have a good learning attitude, love exploring new things and accepting new challenges. <br><br>Last year, I was studying computer engineering in the Chinese University of Hong Kong. When I was living in the dorm, I have acquired communication skills during dorm activities. Besides, I embrace teamwork especially volunteering when people work together in helping people in need. " + 
+mainText2.innerHTML = "Hi! I am Theo. I come from Hong Kong and I am passionate on coding, have a good learning attitude, love exploring new things and accepting new challenges. <br><br>Last year, I was studying computer engineering in The Chinese University of Hong Kong. When I was living in the dorm, I have acquired communication skills during dorm activities. Besides, I embrace teamwork especially volunteering when people work together in helping people in need. " + 
 "<br><br>Although I cherish the learning experience in the university, I failed to proceed with my study due to some family issues. However, I don't want to give up on chasing my dream as a coder. " +
 "<br><br>Then, I got a chance for coming to UK with right to work. I thought it would be a great chance for me to step outside the comfort zone and have a greater stage in a fantastic city like London to realize my dream." +
 "<br><br>I have joined the community a few weeks ago, although it is just a short period of time, the experience is impressive and beneficial on my studying. " + 
