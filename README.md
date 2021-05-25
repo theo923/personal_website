@@ -3,7 +3,7 @@
 	I finished my website.
 	Starting from now, I will do the debug.
 	
-## Content that working on
+## Content
 
 | Content | Support |
 |---|:---:|
@@ -13,7 +13,7 @@
 | Trait | ✔️ |
 | Profile | ✔️ |
 
-## Features that working on
+## Features
 
 | Features | Support |
 |---|:---:|
