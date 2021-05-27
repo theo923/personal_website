@@ -537,13 +537,13 @@ body{
 
   #box4 .gridBox1 {
     grid-template-columns: 90%;
-    justify-items: left;
+    justify-items: center;
     padding: 10% 0 10% 0;
   }
 
   #box4 .gridBox2 {
     grid-template-columns: 90%;
-    justify-items: right;
+    justify-items: center;
     padding: 10% 0 10% 0;
   }
 
