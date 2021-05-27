@@ -1,7 +1,6 @@
 # My Personal Website
 
-	I finished my website.
-	Starting from now, I will do the debug.
+	Welcome to Theo's portfolio!!
 	
 ## Content
 
