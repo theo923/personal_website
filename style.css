@@ -476,7 +476,10 @@ body{
 
 /*==================== adjustment for smartphone ====================*/
 
-@media (max-width: 1300px){
+@media screen and (max-width: 1300px){
+  .background-box div:nth-child(n){
+    display: none;
+  }
 
   #box4 .content-box2 {
     display: grid;
@@ -488,9 +491,9 @@ body{
 }
 
 
-@media (max-width: 1100px){
+@media screen and (max-width: 1100px){
   #box2 {
-    height: 130vh;
+    height: auto;
   }
 
   #box2 .content-box {
@@ -521,7 +524,8 @@ body{
 
 }
 
-@media (max-width: 900px){
+@media screen and (max-width: 900px){
+
   .image {
     width: 80vw;
     height: auto;
@@ -532,14 +536,14 @@ body{
   }
 
   #box4 .gridBox1 {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    grid-template-columns: 90%;
+    justify-items: left;
     padding: 10% 0 10% 0;
   }
 
   #box4 .gridBox2 {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    grid-template-columns: 90%;
+    justify-items: right;
     padding: 10% 0 10% 0;
   }
 
@@ -549,7 +553,7 @@ body{
 
 }
 
-@media (max-width: 600px){
+@media screen and (max-width: 600px){
   .bar-item {
       margin: 0;
       font-size: 80%;
@@ -574,6 +578,27 @@ body{
   }
 }
 
+@media screen and (max-width: 320px){
+  
+  #box4 .gridBox1 {
+    grid-template-columns: 70%;
+  }
+
+  #box4 .gridBox2 {
+    grid-template-columns: 70%;
+  }
+}
+
+@media screen and (max-width: 280px){
+  
+  #box4 .gridBox1 {
+    grid-template-columns: 60%;
+  }
+
+  #box4 .gridBox2 {
+    grid-template-columns: 60%;
+  }
+}
 /*==================== cursor ====================*/
   
 .cursor {
